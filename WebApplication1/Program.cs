@@ -1,4 +1,5 @@
 using CustomMiddleware;
+using WebApplication1;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,8 +19,12 @@ await next.Invoke(context);
 
 });
 
-app.UseMiddleware<UsingImiddlewareInterface>();
+//Call custom middleware
+//app.UseMiddleware<UsingImiddlewareInterface>();
 
+//call custom middleware using extention method
+
+app.UseUsingIMiddlewareInterface();
 
 //Terminal middleware or short-circuting 
 app.Run(async (HttpContext context) => {

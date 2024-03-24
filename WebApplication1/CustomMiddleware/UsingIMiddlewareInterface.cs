@@ -1,10 +1,7 @@
 
 namespace CustomMiddleware
 {
-
-
-
-    public class UsingImiddlewareInterface : IMiddleware
+   public class UsingImiddlewareInterface : IMiddleware
     {
         public async Task InvokeAsync(HttpContext context, RequestDelegate next)
         {
