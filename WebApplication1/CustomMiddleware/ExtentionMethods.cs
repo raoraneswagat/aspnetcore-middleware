@@ -8,4 +8,9 @@ public static class ExtentionMethods
       {
          return app.UseMiddleware<UsingImiddlewareInterface>();
       }
+
+      public static IApplicationBuilder UseConvetionalCustomMiddleware(this IApplicationBuilder app)
+      {
+         return app.UseMiddleware<ConvetionalCustomMiddleware>();
+      }
 }

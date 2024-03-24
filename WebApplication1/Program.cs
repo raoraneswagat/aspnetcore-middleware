@@ -26,6 +26,10 @@ await next.Invoke(context);
 
 app.UseUsingIMiddlewareInterface();
 
+//Call Conventional middleware
+
+app.UseConvetionalCustomMiddleware();
+
 //Terminal middleware or short-circuting 
 app.Run(async (HttpContext context) => {
 
